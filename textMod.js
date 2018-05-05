@@ -1,19 +1,18 @@
-/**
- * This file handles the logic for finding instances of 'Toronto' and replacing it with 'Lebronto'
- * 
- * 
- * Property Groove Cruise, 2018
- */
+var elements = document.getElementsByTagName('*');
 
-const reToronto = [ '', '', '' ];
+for (var i = 0; i < elements.length; i++) {
+    var element = elements[i];
 
-const replace = () => {
-}
+    for (var j = 0; j < element.childNodes.length; j++) {
+        var node = element.childNodes[j];
 
-const scraper = () => {
-    /**
-     * From the current page, grab teh DOM , and search for any matching toronto strings
-     */
+        if (node.nodeType === 3) {
+            var text = node.nodeValue;
+            var replacedText = text.replace('Toronto', 'LeBronto');
 
-     return documentObj;
+            if (replacedText !== text) {
+                element.replaceChild(document.createTextNode(replacedText), node);
+            }
+        }
+    }
 }
