@@ -1,0 +1,6 @@
+{
+    "name": "LeChromeExtension",
+    "version": "1.0",
+    "description": "Never let yourself act like you forgot about Bron",
+    "manifest_version": 2
+}
